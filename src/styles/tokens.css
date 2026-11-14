@@ -57,7 +57,7 @@
   --layer-overlay: 30;
 
   color-scheme: light dark;
-  --bg: light-dark(#f7f8fa, #15171d);
+  --bg: light-dark(#f7f7fb, #171722);
   --surface: light-dark(#ffffff, #1c1f27);
   --surface-muted: light-dark(#edf0f5, #242934);
   --text: light-dark(#171a23, #f1f3f8);
@@ -65,7 +65,7 @@
   --border: light-dark(#d4dae5, #363e4e);
   --border-control: light-dark(#7b879d, #778299);
   --indigo: #7667e8;
-  --accent: var(--accent-override, light-dark(#5543be, #b5abf6));
+  --accent: var(--accent-override, light-dark(#6956af, #a99ae8));
   --accent-hover: light-dark(#423199, #cec5ff);
   --accent-soft: light-dark(#eeebfc, #302a49);
   --on-accent: light-dark(#ffffff, #171a23);

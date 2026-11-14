@@ -5,14 +5,15 @@ import PostMetadata from "./PostMetadata.astro";
 interface Props {
   posts: Post[];
   empty?: string;
+  editorial?: boolean;
 }
-const { posts, empty = "No published articles." } = Astro.props;
+const { posts, empty = "No published articles.", editorial = false } = Astro.props;
 ---
 
 {posts.length === 0 ? (
   <p class="muted">{empty}</p>
 ) : (
-  <ul class="post-list">
+  <ul class:list={["post-list", { editorial }]}>
     {posts.map((post) => (
       <li>
         <a class="post-title" href={sitePath("posts", post.id)}>
@@ -42,5 +43,19 @@ const { posts, empty = "No published articles." } = Astro.props;
   p {
     margin-block: var(--space-1) var(--space-2);
     color: var(--text-muted);
+  }
+  .editorial {
+    margin-block-end: var(--space-4);
+    border-block-end: var(--rule);
+  }
+  .editorial .post-title {
+    font-size: var(--text-h3);
+    line-height: var(--leading-heading);
+  }
+  .editorial .post-title:is(:hover, :focus-visible) {
+    color: var(--accent-hover);
+  }
+  .editorial p {
+    max-inline-size: var(--reading-width);
   }
 </style>

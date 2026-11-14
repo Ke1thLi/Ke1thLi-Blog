@@ -18,7 +18,7 @@ const categories = groupByCategory(posts);
   <HomeHero />
   <section aria-labelledby="recent-articles">
     <h2 id="recent-articles">Recent articles</h2>
-    <PostList posts={posts.slice(0, siteConfig.home.recentPosts)} />
+    <PostList posts={posts.slice(0, siteConfig.home.recentPosts)} editorial />
     <a href={sitePath("articles")}>View all articles</a>
   </section>
   <section aria-labelledby="featured-articles">
